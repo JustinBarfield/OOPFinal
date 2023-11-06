@@ -2,7 +2,6 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Reservation {
-
     private int size;
     private String name;
     private LocalDate dateReserved;
