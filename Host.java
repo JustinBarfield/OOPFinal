@@ -1,12 +1,10 @@
 import java.util.ArrayList;
 
-public class Host extends Employee {
-
-    //queue of tables that need to be seated/reservations
+public class Host<E> extends Employee {
     ArrayList<E> tables = new ArrayList<E>();
-
-    public Host() {
-        Employee.super();
-
+    public Host(String name, String position, boolean clockedIn) {
+        super(name, position, clockedIn);
     }
+
+    
 }

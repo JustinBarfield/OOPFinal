@@ -1,12 +1,10 @@
 import java.util.ArrayList;
 
-public class Cook extends Employee {
-
-    //queue of food items to be cooked
-    ArrayList<E> food = new ArrayList<E>();
-
-    public Cook() {
-        Employee.super();
-
+public class Cook<E> extends Employee {
+    ArrayList<E> tables = new ArrayList<E>();
+    public Cook(String name, String position, boolean clockedIn) {
+        super(name, position, clockedIn);
     }
+
+    
 }

@@ -1,11 +1,14 @@
 import java.util.ArrayList;
 
-public class Server extends Employee {
-
+public class Server<E> extends Employee {
+    
     ArrayList<E> tables = new ArrayList<E>();
-
-    public Server() {
-        Employee.super();
-
+    public Server(String name, String position, boolean clockedIn) {
+        super(name, position, clockedIn);
     }
+
+    
 }
+
+
+

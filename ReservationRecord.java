@@ -7,24 +7,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReservationRecord {
+
+
+
+ //need to sort the reservations by day and time to determine which ones come first; set a time range of a few days for testing purposes??
+ //once sorted they can go into an array that can be fed into an algorithm for putting the reservations into tables
+ // algorithm should go day by day, then hour by hour, then fill in the tables preferable lowest to highest index to make it easier to understand how many at one time
+
+
+
     public static void main(String[] args) {
-        String filePath = "reservation_data.txt"; // Replace with your file path
+        String filePath = "reservation_data.txt"; //add text file with reservations
         List<Reservation> reservations = new ArrayList<>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {//read in data; put in an array reservationAttributes[]
             String line;
             while ((line = br.readLine()) != null) {
-                String[] parts = line.split(",");
-                if (parts.length >= 4) {
-                    int size = Integer.parseInt(parts[0]);
-                    String name = parts[1];
-                    LocalDate dateReserved = LocalDate.parse(parts[2]);
-                    LocalTime timeReserved = LocalTime.parse(parts[3]);
+                String[] reservationAttributes = line.split(",");
+                if (reservationAttributes.length >= 4) {
+                    int size = Integer.parseInt(reservationAttributes[0]);
+                    String name = reservationAttributes[1];
+                    LocalDate dateReserved = LocalDate.parse(reservationAttributes[2]);
+                    LocalTime timeReserved = LocalTime.parse(reservationAttributes[3]);
 
-                    // Create a Reservation object with the parsed data
+                    // Create a Reservation with the data
                     Reservation reservation = new Reservation(size, name, dateReserved, LocalTime.now(), timeReserved);
 
-                    // Add the Reservation object to the ArrayList
+                    // Add the Reservation to the ArrayList
                     reservations.add(reservation);
                 } else {
                     System.out.println("Invalid data: " + line);
@@ -33,10 +42,14 @@ public class ReservationRecord {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        // Now, you have an ArrayList of Reservation objects
-        for (Reservation reservation : reservations) {
-            System.out.println("Reservation: " + reservation.toString());
-        }
     }
 }
+
+
+        
+       
+    
+
+   
+
+

@@ -1,12 +1,13 @@
-public class Employee extends Resturant {
-
+public class Employee {
     private String name;
     private String position;
-    private Boolean clockedIn;
+    private boolean clockedIn;
 
-    public Employee(String name, String position, Boolean clockedIn) {
+    public Employee(String name, String position, boolean clockedIn) {
         this.name = name;
         this.position = position;
         this.clockedIn = clockedIn;
     }
+
+    
 }

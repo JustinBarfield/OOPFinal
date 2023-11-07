@@ -1,11 +1,10 @@
 import java.util.ArrayList;
 
-public class Busser extends Employee {
-
+public class Busser<E> extends Employee {
     ArrayList<E> tables = new ArrayList<E>();
-
-    public Busser() {
-        Employee.super();
-
+    public Busser(String name, String position, boolean clockedIn) {
+        super(name, position, clockedIn);
     }
+
+    
 }
