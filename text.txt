@@ -1,0 +1,13 @@
+trying to organize my thoughts and what needs to get done 
+
+the resturaunt is initialized in a 2d array of tables of varying size
+the reservations are sorted by day, by time, by party size in ReservationRecord
+should each reservation be set for a duration? to make "timing" easier?
+the reservations are sent to the host to seat the tables in the sorted order
+need to make an algorithm to figure out what tables to seat and where
+a server and busser are set to the table to take the order
+the order is sent to the cook
+the order is returned to the table? not sure what to do with a food order
+when party is done, after duration? busser does job and clears table
+
+

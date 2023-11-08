@@ -4,6 +4,7 @@ public class Restaurant<E> {
     public Restaurant(int rows, int columns) {
         
         tables = (E[][]) new Object[rows][columns];
+        // need to initialize all of the indexes to have tables of varying sizes
     }
 
     
