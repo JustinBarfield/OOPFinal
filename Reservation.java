@@ -7,6 +7,7 @@ public class Reservation {
     private LocalDate dateReserved;
     private LocalTime timeCreated;
     private LocalTime timeReserved;
+    //add a duration of reservation
 
     public Reservation(int size, String name, LocalDate dateReserved, LocalTime timeCreated, LocalTime timeReserved) {
         this.size = size;
